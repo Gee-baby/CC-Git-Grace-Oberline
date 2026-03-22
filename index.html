@@ -1,14 +1,136 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"/>
-  <script src="script/script.js" defer></script>
-    <title>ObeG</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ObeG</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
- 
+
+  <!-- Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- Noise overlay -->
+  <div class="noise"></div>
+
+  <!-- Nav -->
+  <nav>
+    <div class="logo">ObeG<span class="dot">.</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#work">Projets</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="close-menu" id="closeMenu">✕</button>
+    <ul>
+      <li><a href="#about" class="mobile-link">À propos</a></li>
+      <li><a href="#work" class="mobile-link">Projets</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-tag">— Portfolio 2026</div>
+    <h1 class="hero-title">
+      <span class="line" data-delay="0">ObeG</span>
+      <span class="line italic" data-delay="100">Créateur</span>
+      <span class="line" data-delay="200">Digital</span>
+    </h1>
+    <p class="hero-sub" data-delay="350">Design · Développement · Vision</p>
+    <a href="#work" class="cta-btn" data-delay="450">Voir les projets <span class="arrow">↘</span></a>
+
+    <div class="hero-deco">
+      <div class="circle c1"></div>
+      <div class="circle c2"></div>
+      <div class="grid-lines"></div>
+    </div>
+    <div class="scroll-hint">scroll <span>↓</span></div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="section-label">01 / À propos</div>
+    <div class="about-inner">
+      <div class="about-text">
+        <h2>Façonner des<br/><em>expériences</em><br/>mémorables.</h2>
+        <p>ObeG est un studio créatif à l'intersection du design et de la technologie. Nous construisons des interfaces qui captivent, des systèmes qui fonctionnent, et des marques qui restent.</p>
+        <p>Chaque projet est une conversation entre forme et fonction — ni compromis.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat"><span class="num" data-target="48">0</span><span class="unit">+</span><p>Projets livrés</p></div>
+        <div class="stat"><span class="num" data-target="12">0</span><span class="unit">k</span><p>Utilisateurs touchés</p></div>
+        <div class="stat"><span class="num" data-target="5">0</span><span class="unit">ans</span><p>D'expérience</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section class="work" id="work">
+    <div class="section-label">02 / Projets</div>
+    <h2 class="work-title">Sélection de travaux</h2>
+    <div class="projects">
+      <article class="project-card" data-index="01">
+        <div class="card-img img1"></div>
+        <div class="card-body">
+          <span class="tag">Web Design</span>
+          <h3>Nexus Platform</h3>
+          <p>Dashboard SaaS avec visualisations temps réel et design system complet.</p>
+          <a href="#" class="card-link">Explorer →</a>
+        </div>
+      </article>
+      <article class="project-card" data-index="02">
+        <div class="card-img img2"></div>
+        <div class="card-body">
+          <span class="tag">Branding</span>
+          <h3>Studio Lumière</h3>
+          <p>Identité visuelle et motion design pour un studio de photographie parisien.</p>
+          <a href="#" class="card-link">Explorer →</a>
+        </div>
+      </article>
+      <article class="project-card" data-index="03">
+        <div class="card-img img3"></div>
+        <div class="card-body">
+          <span class="tag">Développement</span>
+          <h3>Forma App</h3>
+          <p>Application mobile de gestion de contenu avec IA intégrée et sync cloud.</p>
+          <a href="#" class="card-link">Explorer →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="section-label">03 / Contact</div>
+    <div class="contact-inner">
+      <h2>Travaillons<br/><em>ensemble.</em></h2>
+      <p>Un projet en tête ? Discutons-en.</p>
+      <a href="mailto:hello@obeg.studio" class="email-link">hello@obeg.studio</a>
+      <div class="socials">
+        <a href="#">Twitter</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+        <a href="#">Dribbble</a>
+      </div>
+    </div>
+    <div class="big-logo">ObeG</div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <span>© 2026 ObeG Studio</span>
+    <span class="mono">Fait avec soin ✦</span>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
