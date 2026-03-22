@@ -74,4 +74,36 @@ function animateCounter(el) {
   }
   requestAnimationFrame(update);
 }
+ // ─── Nav scroll style ───
+const nav = document.querySelector('nav');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 60) {
+    nav.style.borderBottomColor = 'rgba(240,235,224,0.12)';
+  } else {
+    nav.style.borderBottomColor = 'rgba(240,235,224,0.08)';
+  }
+});
  
+// ─── Project card tilt ───
+document.querySelectorAll('.project-card').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+    card.style.transform = `perspective(800px) rotateY(${x / 40}deg) rotateX(${-y / 40}deg) translateY(-4px)`;
+  });
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = '';
+  });
+});
+ 
+// ─── Smooth anchor scroll ───
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
