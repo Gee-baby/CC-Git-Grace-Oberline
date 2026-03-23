@@ -279,9 +279,9 @@ nav {
 }
 .project-card:hover .card-img { transform: scale(1.04); }
 
-.img1 { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); }
-.img2 { background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460); }
-.img3 { background: linear-gradient(135deg, #0d0d0d, #1a1a1a, #2d1b4e); }
+.img1 { background-image: url(../images/image1.png) }
+.img2 { background-image: url(../images/image2.png)}
+.img3 { background-image: url(../images/image3.png) }
 
 .img1::after, .img2::after, .img3::after {
   content: ''; display: block; height: 100%;
